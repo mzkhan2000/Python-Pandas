@@ -31,7 +31,13 @@ dataframes_list[2].tail()
 PUBLIC_DISPATCHSCADA_df = pd.concat(dataframes_list)
 
 #6
+PUBLIC_DISPATCHSCADA_df.tail()
 
+#7
+PUBLIC_DISPATCHSCADA_df.shape
+
+# 8
+PUBLIC_DISPATCHSCADA_df.to_csv("PUBLIC_DISPATCHSCADA_all.csv") # Saving as csv file/ Monir 
 ```
 Python-Pandas necessary-code-for-me
 ```python
