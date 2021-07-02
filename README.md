@@ -14,4 +14,6 @@ df = pd.read_csv("data/cereal.csv", skiprows = 1)
 # skipfooter
 df = pd.read_csv("data/cereal.csv", skipfooter = 1)
 
+# Skiprows and skipfooter
+df = pd.read_csv("data/cereal.csv", skiprows = 1, skipfooter = 1)
 ```
