@@ -10,4 +10,8 @@ print(os.getcwd())
 
 # Skiprows
 df = pd.read_csv("data/cereal.csv", skiprows = 1)
+
+# skipfooter
+df = pd.read_csv("data/cereal.csv", skipfooter = 1)
+
 ```
