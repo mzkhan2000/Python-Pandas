@@ -64,4 +64,7 @@ for i in range(len(list_of_names)):
     else:   
         dataframes_list[i] = pd.read_csv(list_of_names[i], skiprows = 2, skipfooter = 1)
     #dataframes_list.append(temp_df)   
+    
+    
+PUBLIC_DISPATCHSCADA_df = pd.concat(dataframes_list)
 ```
