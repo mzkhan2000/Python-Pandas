@@ -43,4 +43,25 @@ dataframes_list = []
 for i in range(len(list_of_names)):
     temp_df = pd.read_csv("./csv/"+list_of_names[i]+".csv")
     dataframes_list.append(temp_df)
+
+
+#================================================================
+ # assign dataset names
+PUBLIC_DISPATCHSCADA_list_of_files = []
+
+# all dataset names with starting PUBLIC_DISPATCHSCADA
+PUBLIC_DISPATCHSCADA_list_of_files = glob.glob('PUBLIC_DISPATCHSCADA*.csv')
+
+# create empty list
+dataframes_list = []
+
+ list_of_names = PUBLIC_DISPATCHSCADA_list_of_files
+# append datasets into teh list
+for i in range(len(list_of_names)):
+    # temp_df = pd.read_csv("./csv/"+list_of_names[i]+".csv")
+    if i==0:
+        dataframes_list[i] = pd.read_csv(list_of_names[i], skiprows = 1, skipfooter = 1)
+    else:   
+        dataframes_list[i] = pd.read_csv(list_of_names[i], skiprows = 2, skipfooter = 1)
+    #dataframes_list.append(temp_df)   
 ```
