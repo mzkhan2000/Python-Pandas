@@ -105,3 +105,19 @@ for i in range(len(list_of_names)):
     
 PUBLIC_DISPATCHSCADA_df = pd.concat(dataframes_list)
 ```
+
+To select rows whose column value equals a scalar, some_value, use ==:
+
+df.loc[df['column_name'] == some_value]
+To select rows whose column value is in an iterable, some_values, use isin:
+
+df.loc[df['column_name'].isin(some_values)]
+Combine multiple conditions with &:
+
+df.loc[(df['column_name'] >= A) & (df['column_name'] <= B)]
+Note the parentheses. Due to Python's operator precedence rules, & binds more tightly than <= and >=. Thus, the parentheses in the last example are necessary. Without the parentheses
+
+df['column_name'] >= A & df['column_name'] <= B
+is parsed as
+
+df['column_name'] >= (A & df['column_name']) <= B
