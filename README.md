@@ -123,8 +123,9 @@ is parsed as
 
 df['column_name'] >= (A & df['column_name']) <= B
 
-# To get the highest values of a column, you can use nlargest() :
+# To get the highest values of a column (such as top 2 or top 3), you can use nlargest() :
 
 df['High'].nlargest(2)
 
+You can also use nsmallest() to get the lowest values.
 ```
