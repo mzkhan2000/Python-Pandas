@@ -129,3 +129,4 @@ df['High'].nlargest(2)
 
 You can also use nsmallest() to get the lowest values.
 ```
+# Pandas iloc and loc – quickly select rows and columns in DataFrames
